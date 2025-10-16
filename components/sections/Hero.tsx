@@ -161,7 +161,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent-start)] to-[var(--accent-end)] rounded-full blur-lg opacity-60 group-hover:opacity-80 transition-opacity" />
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full border-2 border-slate-200 dark:border-white/10 overflow-hidden bg-gradient-to-br from-[var(--accent-start)] to-[var(--accent-end)] p-1 shadow-[0_10px_30px_rgba(139,92,246,0.12)]">
                 <Image
-                  src="/images/profile.jpg"
+                  src="/images/faizan.jpg"
                   alt="Syed Faizan"
                   width={320}
                   height={320}
