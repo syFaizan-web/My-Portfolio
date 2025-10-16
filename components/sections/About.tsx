@@ -66,14 +66,12 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              About Me
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+            About Me
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-400 dark:to-purple-500 mx-auto mb-8" />
-          <div className="rounded-2xl p-6 max-w-3xl mx-auto bg-white/70 dark:glass-panel border border-slate-200 dark:border-white/10">
-            <p className="text-lg text-slate-700 dark:text-slate-100 leading-relaxed">
+          <div className="w-20 h-0.5 bg-slate-900 dark:bg-white mx-auto mb-8" />
+          <div className="rounded-2xl p-6 max-w-3xl mx-auto bg-white dark:bg-neutral-900 border border-slate-200 dark:border-white/10">
+            <p className="text-lg text-slate-700 dark:text-slate-200 leading-relaxed">
               I'm a passionate MERN Stack Developer with 5+ years of experience
               building scalable web applications. I specialize in creating
               elegant solutions to complex problems, with a focus on user
@@ -98,9 +96,9 @@ export default function About() {
               whileHover={{ scale: 1.02, y: -5 }}
               className="relative group"
             >
-              <div className="rounded-2xl p-6 h-full border border-slate-200 dark:border-white/10 bg-white/80 dark:glass-panel shadow-[0_12px_28px_-12px_rgba(2,6,23,0.18)] dark:shadow-[0_16px_32px_-12px_rgba(0,0,0,0.45)]">
+              <div className="rounded-2xl p-6 h-full border border-slate-200 dark:border-white/10 bg-white dark:bg-neutral-900">
                 <div className="flex items-center mb-6">
-                  <div className="p-3 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 mr-3">
+                  <div className="p-3 rounded-lg bg-slate-900 mr-3">
                     <category.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
@@ -120,7 +118,7 @@ export default function About() {
                         </span>
                       </div>
                       <div
-                        className="h-2 bg-slate-200 dark:bg-gray-700/50 rounded-full overflow-hidden"
+                        className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden"
                         role="progressbar"
                         aria-valuenow={skill.level}
                         aria-valuemin={0}
@@ -128,7 +126,7 @@ export default function About() {
                         aria-label={`${skill.name} skill level: ${skill.level}%`}
                       >
                         <motion.div
-                          className="h-full bg-gradient-to-r from-cyan-400 to-purple-500"
+                          className="h-full bg-slate-900 dark:bg-white"
                           initial={{ width: 0 }}
                           animate={inView ? { width: `${skill.level}%` } : {}}
                           transition={{

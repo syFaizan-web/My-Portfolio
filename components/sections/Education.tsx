@@ -65,12 +65,10 @@ export default function Education() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Education
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+            Education
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto" />
+          <div className="w-20 h-0.5 bg-slate-900 dark:bg-white mx-auto" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,15 +81,9 @@ export default function Education() {
               whileHover={{ scale: 1.03, y: -10 }}
               className="relative group"
             >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${edu.color} rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity`}
-              />
-
-              <div className="relative bg-white/70 dark:bg-[#1a1a2e]/90 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-2xl p-6 h-full group-hover:border-slate-300 dark:group-hover:border-white/20 transition-all">
+              <div className="relative bg-white dark:bg-neutral-900 border border-slate-200 dark:border-white/10 rounded-2xl p-6 h-full">
                 <div className="flex items-center justify-between mb-6">
-                  <div
-                    className={`p-4 rounded-xl bg-gradient-to-br ${edu.color}`}
-                  >
+                  <div className={`p-4 rounded-xl bg-slate-900`}>
                     <edu.icon className="h-8 w-8 text-white" />
                   </div>
                   <span className="text-sm text-slate-600 dark:text-gray-400 font-medium">
@@ -119,7 +111,7 @@ export default function Education() {
                       className="flex items-start"
                     >
                       <div
-                        className={`w-2 h-2 rounded-full bg-gradient-to-r ${edu.color} mt-2 mr-3 flex-shrink-0`}
+                        className={`w-2 h-2 rounded-full bg-slate-900 dark:bg-white mt-2 mr-3 flex-shrink-0`}
                       />
                       <p className="text-sm text-slate-700 dark:text-gray-300">
                         {achievement}
@@ -129,7 +121,7 @@ export default function Education() {
                 </div>
 
                 <motion.div
-                  className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${edu.color} rounded-b-2xl`}
+                  className={`absolute bottom-0 left-0 right-0 h-1 bg-slate-900 dark:bg-white rounded-b-2xl`}
                   initial={{ scaleX: 0 }}
                   animate={inView ? { scaleX: 1 } : {}}
                   transition={{ duration: 0.8, delay: index * 0.2 }}

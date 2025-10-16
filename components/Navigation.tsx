@@ -49,7 +49,7 @@ export default function Navigation() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-sm bg-white/60 dark:bg-black/60 border-b border-black/10 dark:border-white/5"
+          ? "bg-white dark:bg-black border-b border-black/10 dark:border-white/5"
           : "bg-transparent"
       }`}
     >
@@ -63,7 +63,7 @@ export default function Navigation() {
         >
           <motion.a
             href="#hero"
-            className="text-xl font-bold bg-gradient-to-r from-[var(--accent-start)] to-[var(--accent-end)] bg-clip-text text-transparent"
+            className="text-xl font-bold text-slate-900 dark:text-white"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             animate={{
@@ -126,7 +126,7 @@ export default function Navigation() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden backdrop-blur-sm bg-white/60 dark:bg-black/60 border-b border-black/10 dark:border-white/5"
+          className="md:hidden bg-white dark:bg-black border-b border-black/10 dark:border-white/5"
         >
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item, index) => (

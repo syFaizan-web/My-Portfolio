@@ -109,12 +109,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+            Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-8" />
+          <div className="w-20 h-0.5 bg-slate-900 dark:bg-white mx-auto mb-8" />
 
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
@@ -124,8 +122,8 @@ export default function Projects() {
                 onClick={() => setSelectedCategory(category)}
                 className={
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-cyan-600 to-purple-600 text-white border-0"
-                    : "border-slate-300 dark:border-white/20 text-slate-700 dark:text-gray-300 hover:border-cyan-500 hover:text-cyan-700 dark:hover:text-cyan-400"
+                    ? "bg-slate-900 text-white dark:bg-white dark:text-slate-900 border-0"
+                    : "border-slate-300 dark:border-white/20 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-white/10"
                 }
               >
                 {category}
@@ -143,23 +141,18 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${project.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
-              />
-
-              <div className="relative bg-white/70 dark:bg-[#1a1a2e]/90 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-2xl overflow-hidden group-hover:border-slate-300 dark:group-hover:border-white/20 transition-all">
+              <div className="relative bg-white dark:bg-neutral-900 border border-slate-200 dark:border-white/10 rounded-2xl overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-60 dark:from-[#1a1a2e]" />
 
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileHover={{ opacity: 1, y: 0 }}
-                    className="absolute inset-0 bg-black/10 dark:bg-black/80 backdrop-blur-sm flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 bg-black/0 dark:bg-black/70 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   >
                     <a
                       href={project.liveUrl}
@@ -197,7 +190,7 @@ export default function Projects() {
                 </div>
 
                 <motion.div
-                  className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${project.color}`}
+                  className={`absolute bottom-0 left-0 right-0 h-1 bg-slate-900 dark:bg-white`}
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}

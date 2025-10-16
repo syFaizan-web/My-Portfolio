@@ -119,12 +119,10 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Get In Touch
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+            Get In Touch
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-6" />
+          <div className="w-20 h-0.5 bg-slate-900 dark:bg-white mx-auto mb-6" />
           <p className="text-slate-700 dark:text-gray-300 max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach
             out!
@@ -153,7 +151,7 @@ export default function Contact() {
                   whileHover={{ scale: 1.03, x: 10 }}
                   className="flex items-start space-x-4 group"
                 >
-                  <div className="p-3 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 group-hover:shadow-lg group-hover:shadow-cyan-500/50 transition-shadow">
+                  <div className="p-3 rounded-lg bg-slate-900">
                     <info.icon className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -186,7 +184,7 @@ export default function Contact() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.7 + index * 0.1 }}
-                    className={`p-4 rounded-full bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 ${social.color} transition-all text-slate-700 dark:text-white`}
+                    className={`p-4 rounded-full bg-transparent border border-slate-200 dark:border-white/10 text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-colors`}
                   >
                     <social.icon className="h-6 w-6" />
                   </motion.a>
@@ -201,10 +199,9 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl blur-xl" />
             <form
               onSubmit={handleSubmit}
-              className="relative bg-white/70 dark:bg-[#1a1a2e]/80 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-2xl p-8"
+              className="relative bg-white dark:bg-neutral-900 border border-slate-200 dark:border-white/10 rounded-2xl p-8"
             >
               <div className="space-y-6">
                 <div>
@@ -267,7 +264,7 @@ export default function Contact() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white border-0 shadow-lg shadow-cyan-500/50 group"
+                  className="w-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
                 >
                   <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   Send Message

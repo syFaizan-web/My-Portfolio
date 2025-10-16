@@ -71,16 +71,14 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Experience
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+            Experience
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto" />
+          <div className="w-20 h-0.5 bg-slate-900 dark:bg-white mx-auto" />
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-cyan-400 via-purple-500 to-transparent hidden md:block" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-slate-200 dark:bg-slate-800 hidden md:block" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -101,18 +99,13 @@ export default function Experience() {
                     whileHover={{ scale: 1.02, y: -5 }}
                     className="relative group"
                   >
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${exp.color} rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity`}
-                    />
-                    <div className="relative bg-white/70 dark:bg-[#1a1a2e]/90 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-2xl p-6 group-hover:border-slate-300 dark:group-hover:border-white/20 transition-all">
+                    <div className="relative bg-white dark:bg-neutral-900 border border-slate-200 dark:border-white/10 rounded-2xl p-6">
                       <div
                         className={`flex ${
                           index % 2 === 0 ? "justify-end" : "justify-start"
                         } mb-4`}
                       >
-                        <div
-                          className={`p-3 rounded-lg bg-gradient-to-br ${exp.color}`}
-                        >
+                        <div className={`p-3 rounded-lg bg-slate-900`}>
                           <Briefcase className="h-6 w-6 text-white" />
                         </div>
                       </div>
@@ -161,9 +154,7 @@ export default function Experience() {
                             className="text-sm text-slate-600 dark:text-gray-400 flex items-start"
                           >
                             <span
-                              className={`inline-block w-2 h-2 rounded-full bg-gradient-to-r ${
-                                exp.color
-                              } mt-1.5 ${
+                              className={`inline-block w-2 h-2 rounded-full bg-slate-900 dark:bg-white mt-1.5 ${
                                 index % 2 === 0 ? "ml-2 order-2" : "mr-2"
                               }`}
                             />
@@ -177,10 +168,7 @@ export default function Experience() {
 
                 <div className="hidden md:flex items-center justify-center w-16 h-16 relative z-10">
                   <div
-                    className={`w-4 h-4 rounded-full bg-gradient-to-br ${exp.color} shadow-lg`}
-                  />
-                  <div
-                    className={`absolute w-8 h-8 rounded-full bg-gradient-to-br ${exp.color} opacity-30 animate-ping`}
+                    className={`w-4 h-4 rounded-full bg-slate-900 dark:bg-white shadow`}
                   />
                 </div>
 

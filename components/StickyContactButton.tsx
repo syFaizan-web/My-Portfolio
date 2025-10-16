@@ -18,32 +18,32 @@ const socialLinks = [
     icon: Mail,
     href: socials.email,
     label: "Email",
-    color: "from-red-500 to-orange-500",
+    color: "",
   },
   {
     icon: Github,
     href: socials.github,
     label: "GitHub",
-    color: "from-gray-700 to-gray-900",
+    color: "",
   },
   {
     icon: Linkedin,
     href: socials.linkedin,
     label: "LinkedIn",
-    color: "from-blue-600 to-blue-800",
+    color: "",
   },
   {
     icon: Instagram,
     href: socials.instagram,
     label: "Instagram",
-    color: "from-pink-500 to-purple-600",
+    color: "",
   },
 
   {
     icon: MessageSquare,
     href: "#contact",
     label: "Message",
-    color: "from-green-500 to-emerald-600",
+    color: "",
   },
 ];
 
@@ -102,9 +102,9 @@ export default function StickyContactButton() {
                 </motion.div>
 
                 <div
-                  className={`p-3 rounded-full bg-gradient-to-br ${social.color} shadow-md hover:shadow-lg transition-shadow border border-slate-300/40 dark:border-white/10`}
+                  className={`p-3 rounded-full bg-slate-900 dark:bg-white border border-slate-300/40 dark:border-white/10`}
                 >
-                  <social.icon className="h-4 w-4 text-white" />
+                  <social.icon className="h-4 w-4 text-white dark:text-slate-900" />
                 </div>
               </motion.a>
             ))}
@@ -114,17 +114,16 @@ export default function StickyContactButton() {
 
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative p-4 rounded-full text-white bg-gradient-to-br from-cyan-600 to-purple-600 dark:from-cyan-500 dark:to-purple-500 border border-slate-300/50 dark:border-white/10 shadow-[0_10px_28px_-10px_rgba(0,0,0,0.35)] hover:shadow-[0_16px_36px_-10px_rgba(0,0,0,0.45)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 dark:focus:ring-cyan-400 focus:ring-offset-white dark:focus:ring-offset-transparent transition"
+        className="relative p-4 rounded-full text-white bg-slate-900 dark:bg-white dark:text-slate-900 border border-slate-300 shadow-md hover:shadow-lg dark:border-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400 dark:focus:ring-slate-500 focus:ring-offset-white dark:focus:ring-offset-transparent transition"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         animate={{ rotate: isOpen ? 45 : 0 }}
       >
-        <div className="absolute inset-0 rounded-full bg-white/20 dark:bg-white/10 blur-[6px] opacity-40" />
         <div className="relative">
           {isOpen ? (
-            <X className="h-5 w-5 text-white" />
+            <X className="h-5 w-5 text-white dark:text-slate-900" />
           ) : (
-            <Plus className="h-5 w-5 text-white" />
+            <Plus className="h-5 w-5 text-white dark:text-slate-900" />
           )}
         </div>
       </motion.button>
